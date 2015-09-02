@@ -6,9 +6,9 @@ Const ADS_UF_DONT_EXPIRE_PASSWD = &H10000
 strContainer = "DC=domain,DC=local"
 intMaxPwAge = 106
  
-strEmailFrom = "josea.munoz@gmail.com"
-strEmailSubject = "Password Expiration / Caducidad de Contraseña / Vencimento de senha"
-strSMTP = "dc-server.local"
+strEmailFrom = "<email>"
+strEmailSubject = "Password Expiration / Caducidad de Contrase‚Äìa / Vencimento de senha"
+strSMTP = "smtp-server"
  
 Set objConnection = CreateObject("ADODB.Connection")
 Set objCommand =   CreateObject("ADODB.Command")
@@ -37,13 +37,13 @@ Do Until objRecordSet.EOF
 		strEmailBody = strEmailBody & " " & vbcrlf
 		strEmailBody = strEmailBody & "===============================================" & vbcrlf
 		strEmailBody = strEmailBody & " " & vbcrlf
-		strEmailBody = strEmailBody & "AtenciÛn: su contraseña del dominio Company caducará en " & whenPasswordExpires & " dÌas." & vbcrlf
-		strEmailBody = strEmailBody & "Por favor, cámbiela para evitar problemas de acceso al sistema." & vbcrlf
+		strEmailBody = strEmailBody & "Atenci√≥n: su contrase‚Äìa del dominio Company caducar‚Ä° en " & whenPasswordExpires & " d√≠as." & vbcrlf
+		strEmailBody = strEmailBody & "Por favor, c‚Ä°mbiela para evitar problemas de acceso al sistema." & vbcrlf
 		strEmailBody = strEmailBody & "Reciba un cordial saludo" & vbcrlf
 		strEmailBody = strEmailBody & " " & vbcrlf
 		strEmailBody = strEmailBody & "===============================================" & vbcrlf
 		strEmailBody = strEmailBody & " " & vbcrlf
-		strEmailBody = strEmailBody & "Atençao: a sua senha de acesso ao dominio Company vencera em " & whenPasswordExpires & " días." & vbcrlf
+		strEmailBody = strEmailBody & "Aten¬çao: a sua senha de acesso ao dominio Company vencera em " & whenPasswordExpires & " d‚Äôas." & vbcrlf
 		strEmailBody = strEmailBody & "Por favor, alterar a mesma para evitar problemas de acesso ao sistema" & vbcrlf
 		strEmailBody = strEmailBody & "Atencioamente"
 
